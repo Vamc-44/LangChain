@@ -21,3 +21,17 @@ python main.py
 ```
 
 This will generate and print a joke about beets using the Gemini 2.5 Pro model.
+
+You can change the topic of the joke by modifying the input in the `chain.invoke` method in `main.py`:
+
+```python
+result = chain.invoke({"topic": "your_topic_here"})
+print("Gemini 2.5 Joke:", result)
+```
+
+If you want to give a topic as an input in CLI then
+
+```python
+topic = input("Enter a topic for the joke: ")
+result = chain.invoke({"topic": topic})
+```
